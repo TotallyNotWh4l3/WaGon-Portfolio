@@ -1,0 +1,59 @@
+:root {
+  /* ===== BACKGROUND IMAGES ======================================= */
+  --background-Tarantula: url(../images/background/Tarantula.png);
+  --background-Mountain: url(../images/background/Dark_Mountain.jpg);
+  --background-Crimson: url(../images/background/Crimson_Cloud.jpg);
+  /* ===== COLORS ============================================= */
+  /* Class Color */
+  --color-trans: 0.3;
+  --color-trans2: 0.125;
+
+  --classes-Green: rgba(0, 159, 106);
+  --classes-TGreen: rgba(0, 159, 106, var(--color-trans));
+  --classes-TTGreen: rgba(0, 159, 106, var(--color-trans2));
+
+  --classes-Blue: rgba(0, 135, 189);
+  --classes-TBlue: rgba(0, 135, 189, var(--color-trans));
+  --classes-TTBlue: rgba(0, 135, 189, var(--color-trans2));
+
+
+  --classes-Yellow: rgb(255, 211, 0);
+  --classes-TYellow: rgba(255, 213, 0, var(--color-trans));
+  --classes-TTYellow: rgba(255, 213, 0, var(--color-trans2));
+
+  --classes-Orange: rgb(255, 109, 0);
+  --classes-TOrange: rgba(255, 111, 0, var(--color-trans));
+  --classes-TTOrange: rgba(255, 111, 0, var(--color-trans2));
+
+  --classes-Red: rgb(196, 2, 51);
+  --classes-TRed: rgba(196, 2, 50, var(--color-trans));
+  --classes-TTRed: rgba(196, 2, 50, var(--color-trans2));
+
+  --classes-Black: rgb(28, 28, 28);
+  --classes-TBlack: rgba(28, 28, 28, var(--color-trans));
+  --classes-TTBlack: rgba(28, 28, 28, var(--color-trans2));
+
+  --classes-Gray: rgb(128, 128, 128);
+  --classes-TGray: rgba(128, 128, 128, var(--color-trans));
+  --classes-TTGray: rgba(128, 128, 128, var(--color-trans2));
+
+  --classes-White: rgb(228, 228, 228);
+  --classes-TWhite: rgba(228, 228, 228, var(--color-trans));
+  --classes-TTWhite: rgba(228, 228, 228, var(--color-trans2));
+
+  /* Backgroud Color */
+  --color-VantaBlack: #000000;
+  --color-Black: #181719;
+  --color-LightBlack: #282828;
+
+  /* ========================================================== */
+  /* Text Size */
+  --title-size: 1.5rem;
+  --subtitle-size: 0.75rem;
+
+  --scp-item: 2rem;
+  --scp-number: 4rem;
+
+  --clearance-level: 2.75rem;
+  --clearance-title: 1rem;
+}

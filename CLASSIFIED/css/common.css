@@ -1,0 +1,61 @@
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  background-image: var(--background-Tarantula);
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+
+  filter: blur(2px) brightness(75%) saturate(150%) contrast(125%);
+  scale: 1.05;
+  z-index: -1000;
+  pointer-events: none;
+}
+
+
+.main-wrapper {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.main-container {
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  width: 80%;
+}
+
+.images {
+  width: 720px;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  opacity: 0;
+  translate: 10vw 0;
+}
+
+.header-compensate {
+  margin-top: 2rem;
+}
+
+.jap-text {
+    font-family: "Zen Old Mincho", serif;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 1.2rem;
+    white-space: normal !important;
+}
+
+.white-text {
+  color: white;
+} 
+
+.footer-wrapper {
+  height: 2rem;
+}

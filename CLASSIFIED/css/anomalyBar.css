@@ -1,0 +1,355 @@
+:root {
+    --anomalyBar-bg: #00000085;
+
+    /* ===== ANOMALY BAR ======================================= */
+    --Anom-containmentClass: url("../images/SCP_Icons/Containment_Class/esoteric-icon.svg");
+    --Anom-secondaryClass: url("../images/SCP_Icons/Containment_Class/");
+    --Anom-distruptionClass: url("../images/SCP_Icons/Distruption_Class/ekhi-icon.svg");
+    --Anom-riskClass: url("../images/SCP_Icons/Risk_Class/critical-icon.svg");
+
+    --diamond-offset: 0.825rem;
+    --diamond-size: 2.325rem;
+}
+
+.anom-bar-wrapper {
+    width: 2%;
+    overflow: hidden;
+    background-color: var(--anomalyBar-bg);
+    border-radius: 1rem;
+    backdrop-filter: blur(5px) brightness(100%) saturate(0%);
+    box-shadow: 2px 2px 5px rgb(255, 88, 46), -2px -2px 5px rgb(107, 196, 255);
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+}
+
+
+.anomaly-bar {
+    padding: 1rem 3rem;
+}
+
+.top-box {
+    display: flex;
+    flex-direction: row;
+    color: var(--classes-Red);
+    margin-bottom: 0.25rem;
+}
+
+.topleft-box {
+    margin-right: 0;
+    color: var(--classes-Red);
+}
+
+.slide-lr {
+    display: inline-block;
+    translate: -4rem 0;
+    opacity: 0;
+}
+
+.slide-rl {
+    display: inline-block;
+    translate: 4rem 0;
+    opacity: 0;
+}
+
+.item-title {
+    font-size: var(--scp-item);
+    line-height: var(--scp-item);
+    font-weight: 500;
+}
+
+.item-number {
+    font-size: var(--scp-number);
+    line-height: calc(var(--scp-number));
+    font-weight: 600;
+}
+
+.topCenter-box {
+    margin: 0 1rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.topCenter-box div {
+    opacity: 0;
+    height: 0px;
+    width: 18px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 0px 8px 2px rgb(255, 86, 86);
+}
+
+.topRight-box p {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.clearance-level {
+    font-size: var(--clearance-level);
+    line-height: var(--clearance-level);
+    font-weight: 700;
+}
+
+.clearance-title {
+    font-size: var(--clearance-title);
+    line-height: var(--clearance-title);
+    font-weight: 700;
+}
+
+.center-box {
+    height: 0.175rem;
+    width: 100%;
+    background-color: var(--classes-Red);
+}
+
+.bottom-box {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 7rem;
+}
+
+.bottomLeft-box {
+    display: grid;
+    grid-template-columns: 60% auto;
+    color: white;
+    gap: 0.5rem 0.5rem;
+    flex: 1;
+}
+
+.bottomLeft-box p {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.class-title {
+    color: gray;
+}
+
+.main-class,
+.dist-class,
+.risk-class {
+    padding-left: 0.5rem;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.anom-class {
+    width: 0;
+    height: 0;
+}
+
+.main-class {
+    background-color: var(--classes-TGray);
+    border-left: var(--classes-Gray) 0.5rem solid;
+    grid-row: span 2;
+}
+
+.main-class .class-type {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+}
+
+.main-class .class-title {
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    font-weight: 500;
+}
+
+.cont-class {
+    margin-bottom: 0.25rem;
+}
+
+
+.dist-class,
+.risk-class {
+    background-color: var(--classes-TRed);
+    border-left: var(--classes-Red) 0.5rem solid;
+}
+
+.dist-class .class-type,
+.risk-class .class-type {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+}
+
+.dist-class .class-title,
+.risk-class .class-title {
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    font-weight: 500;
+}
+
+.iconL,
+.iconR {
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 2rem;
+    border: solid 0.2rem black;
+}
+
+.main-class .iconL,
+.main-class .iconR {
+    top: 1.75rem;
+    height: 3.5rem;
+}
+
+.main-class .iconL {
+    right: 1.5rem;
+    width: 6em;
+    background-image: var(--Anom-containmentClass);
+    background-color: var(--color-VantaBlack);
+}
+
+.main-class .iconR {
+    right: 1rem;
+    width: 3.5rem;
+    background-image: var(--Anom-secondaryClass);
+    background-color: var(--classes-White);
+}
+
+.risk-class .iconL,
+.risk-class .iconR,
+.dist-class .iconL,
+.dist-class .iconR {
+    height: 2.5rem;
+    background-color: white;
+    top: .375rem;
+    right: 1rem;
+}
+
+.risk-class .iconL,
+.dist-class .iconL {
+    background-color: black;
+    right: 1rem;
+    width: 4rem;
+    text-align: left;
+    align-content: center;
+    padding-left: .325rem;
+}
+
+.risk-class .iconR,
+.dist-class .iconR {
+    background-color: var(--classes-Red);
+    width: 2.5rem;
+}
+
+.risk-class .iconR {
+    background-image: var(--Anom-riskClass);
+}
+
+.dist-class .iconR {
+    background-image: var(--Anom-distruptionClass);
+}
+
+.bottomRight-box {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.rotate {
+    transform: scale(0);
+}
+
+.segment-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.segment-container {
+    display: grid;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    clip-path: polygon(27.5% 0%, 72.5% 0%,
+            100% 27.5%, 100% 72.5%,
+            72.5% 100%, 27.5% 100%,
+            0% 72.5%, 0% 27.5%);
+    transform: rotate(45deg) scale(0.95);
+}
+
+.segment-item {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.danger-diamond {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+}
+
+.segment-item::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: var(--diamond-size);
+    height: var(--diamond-size);
+    border-radius: 50%;
+    border: black 0.125rem solid;
+    transform: scale(var(--afterIcon-Scale));
+    transform: rotate(-45deg);
+    transition: transform 0.3s, width 0.3s, height 0.3s;
+}
+
+.top-icon::after {
+    top: var(--diamond-offset);
+    left: var(--diamond-offset);
+    background-image: var(--Anom-containmentClass);
+    background-color: var(--color-VantaBlack);
+}
+
+.right-icon::after {
+    top: var(--diamond-offset);
+    right: var(--diamond-offset);
+    background-image: var(--Anom-distruptionClass);
+    background-color: var(--classes-Red);
+}
+
+/* .bottom-icon::after {} */
+
+.left-icon::after {
+    bottom: var(--diamond-offset);
+    left: var(--diamond-offset);
+    background-image: var(--Anom-riskClass);
+    background-color: var(--classes-Red);
+}
+
+.top-icon {
+    background-color: var(--classes-TGray);
+}
+
+.right-icon {
+    background-color: var(--classes-TRed);
+}
+
+.bottom-icon {
+    display: none;
+}
+
+.left-icon {
+    background-color: var(--classes-TRed);
+}
