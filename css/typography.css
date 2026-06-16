@@ -56,10 +56,6 @@ a {
   align-items: center;
 }
 
-.jp-text {
-
-}
-
 .jp-text::before,
 .jp-text::after {
   content: "";
