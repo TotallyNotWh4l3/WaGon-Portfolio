@@ -1,0 +1,144 @@
+/* ====================
+   Projects Section
+   ==================== */
+
+.projects {
+  padding: 5rem 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-info {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.project-description {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background-color: rgba(102, 126, 234, 0.2);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.tag-dev {
+  background-color: rgba(236, 72, 153, 0.2);
+  color: var(--accent-color);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.project-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.project-link:hover {
+  color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.image-wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Forces image to fill the box & crop excess */
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: top center; /* Keeps the center of the graphic focused */
+  background-repeat: no-repeat;
+}
+
+.NonExistent {
+  background-size: 150%;
+  background-image: url(../assets/NonExistent.png);
+}
+
+.AXIOM {
+  background-size: 150%;
+  background-position: bottom;
+  background-image: url(../assets/AXIOM.png);
+}
+
+.CoEfficient {
+  background-size: 130%;
+  background-position: center left;
+  background-image: url(../assets/CoEfficient.png);
+}
